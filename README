@@ -46,9 +46,8 @@
 # cmake --build . --parallel
 # ./rng\_selftest
 # Windows (MSYS2 MinGW64 shell)
+#
 # bash
-# Copy
-# Edit
 # git clone https://github.com/YOUR\_USERNAME/universal\_rng\_lib.git
 # cd universal\_rng\_lib
 # mkdir build \&\& cd build
@@ -59,8 +58,6 @@
 # 
 # Usage Example
 # cpp
-# Copy
-# Edit
 # \#include "universal\_rng.h"
 # \#include <iostream>
 # 
@@ -85,40 +82,27 @@
 # Replace all instances of:
 # 
 # cpp
-# Copy
-# Edit
 # std::mt19937 rng(seed);
 # with:
 # 
 # cpp
-# Copy
-# Edit
 # auto\* rng = universal\_rng\_new(seed, 0, 1);  // use algorithm 0 = Xoroshiro128++
 # Replace:
 # 
 # cpp
-# Copy
-# Edit
 # rng(); // or dist(rng)
 # with:
 # 
 # cpp
-# Copy
-#
-# Edit
 # universal\_rng\_next\_u64(rng);
 # Use universal\_rng\_next\_double(rng); for floating-point needs.
 # 
 # Replace delete rng; with:
 # 
 # cpp
-# Copy
-# Edit
 # universal\_rng\_free(rng);
 # File Structure
 # text
-# Copy
-# Edit
 #
 # X.
 # ├── include/                # All public headers
